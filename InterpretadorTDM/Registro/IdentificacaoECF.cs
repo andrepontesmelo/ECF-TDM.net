@@ -38,9 +38,8 @@ namespace InterpretadorTDM
         public string VersaoBiblioteca => versaoBiblioteca;
         public string VersaoAto => versaoAto;
 
-        private IdentificacaoECF(string linha)
+        private IdentificacaoECF(string linha) : base(linha)
         {
-            linhaCrua = linha;
             tipoRegistro = TipoRegistro.E01_IdentificacaoECF;
             numeroFabricacao = Ler(4, 23);
             mfAdicional = Ler(24);

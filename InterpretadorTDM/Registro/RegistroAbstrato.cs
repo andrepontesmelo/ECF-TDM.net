@@ -6,8 +6,12 @@ namespace InterpretadorTDM
     public abstract class RegistroAbstrato
     {
         protected string linhaCrua;
-
         protected TipoRegistro tipoRegistro;
+
+        protected RegistroAbstrato(string linha)
+        {
+            this.linhaCrua = linha;
+        }
 
         public TipoRegistro TipoRegistro => tipoRegistro;
 
