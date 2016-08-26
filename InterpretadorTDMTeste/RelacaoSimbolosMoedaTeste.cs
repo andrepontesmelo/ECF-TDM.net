@@ -51,6 +51,12 @@ namespace InterpretadorTDMTeste
         }
 
         [Test()]
+        public void DeveLerCNPJ()
+        {
+            Assert.AreEqual("18219329000103", lido.CNPJUsuario);
+        }
+
+        [Test()]
         public void DeveLerSimboloMoeda()
         {
             Assert.AreEqual(" R  ", lido.SimboloMoeda);

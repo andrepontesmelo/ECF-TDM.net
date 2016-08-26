@@ -45,6 +45,12 @@ namespace InterpretadorTDMTeste
         }
 
         [Test()]
+        public void DeveLerCNPJ()
+        {
+            Assert.AreEqual("18219329000103", lido.CNPJUsuario);
+        }
+
+        [Test()]
         public void DeveLerDataHoraGravacao()
         {
             Assert.AreEqual(DateTime.Parse("2008-05-08 17:29:06"), lido.DataHoraGravacao);
