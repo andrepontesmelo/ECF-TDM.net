@@ -20,7 +20,7 @@ namespace InterpretadorTDM.Registro
         {
             this.linhaCrua = linha;
             numeroFabricacao = Ler(4, 23);
-            mfAdicional = Ler(24);
+            mfAdicional = Ler(23);
             modeloECF = Ler(25, 45);
         }
 
@@ -60,7 +60,42 @@ namespace InterpretadorTDM.Registro
 
         protected char Ler(int pos)
         {
-            return linhaCrua[pos - 2];
+            return linhaCrua[pos - 1];
+        }
+
+        private string ObterLetra(int posicao)
+        {
+            return Ler(posicao).ToString().ToUpper();;
+        }
+
+        protected TipoValor LerTipoValor(int posicao)
+        {
+            switch (ObterLetra(posicao))
+            {
+                case "V":
+                    return TipoValor.Monetario;
+                case "P":
+                    return TipoValor.Percentual;
+
+                default:
+                    throw new NotImplementedException(ObterLetra(posicao));
+            }
+        }
+
+        protected TipoAplicacao LerTipoAplicacao(int posicao)
+        {
+            switch (ObterLetra(posicao))
+            {
+                case "D":
+                    return TipoAplicacao.DescontoPrimeiro;
+                case "A":
+                    return TipoAplicacao.AcrescimoPrimeiro;
+                case " ":
+                    return TipoAplicacao.Nenhum;
+
+                default:
+                    throw new NotImplementedException(ObterLetra(posicao));
+            }
         }
 
         protected int LerInteiro(int posInicial, int posFinal)

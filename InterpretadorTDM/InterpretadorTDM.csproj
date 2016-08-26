@@ -47,6 +47,9 @@
     <Compile Include="Registro\PosicaoAtualTotalizadores.cs" />
     <Compile Include="Registro\RelacaoReducoesZ.cs" />
     <Compile Include="Registro\TotalizadoresParciais.cs" />
+    <Compile Include="Registro\CupomFiscal.cs" />
+    <Compile Include="TipoValor.cs" />
+    <Compile Include="TipoAplicacao.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
