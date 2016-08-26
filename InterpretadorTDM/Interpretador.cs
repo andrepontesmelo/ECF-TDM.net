@@ -6,15 +6,9 @@ namespace InterpretadorTDM
 {
 	public class Interpretador
 	{
-        private List<IdentificacaoECF> identificacoesECF = new List<IdentificacaoECF>();
+        private IdentificacaoECF identificacaoECF;
 
-        public List<IdentificacaoECF> IdentificacoesECF
-        {
-            get
-            {
-                return  identificacoesECF;
-            }
-        }
+        public IdentificacaoECF IdentificacaoECF => identificacaoECF;
 
 		private Interpretador(string caminho)
 		{
@@ -29,7 +23,7 @@ namespace InterpretadorTDM
             switch (ObterTipoRegistro(linha))
             {
                 case TipoRegistro.E01_IdentificacaoECF:
-                    identificacoesECF.Add(IdentificacaoECF.InterpretaLinha(linha));
+                    identificacaoECF = IdentificacaoECF.InterpretaLinha(linha);
                     break;
             }
         }
