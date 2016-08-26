@@ -41,6 +41,7 @@
     <Compile Include="Registro\RelacaoCodificacoesGT.cs" />
     <Compile Include="Registro\RelacaoSimbolosMoeda.cs" />
     <Compile Include="Registro\RelacaoAlteracoesVersaoSoftwareBasico.cs" />
+    <Compile Include="Registro\RelacaoDispositivosMFD.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
