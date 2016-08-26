@@ -36,6 +36,8 @@
     <Compile Include="TipoRegistro.cs" />
     <Compile Include="Registro\IdentificacaoECF.cs" />
     <Compile Include="Registro\RegistroAbstrato.cs" />
+    <Compile Include="Registro\IdentificacaoUsuario.cs" />
+    <Compile Include="Registro\Identificacao.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

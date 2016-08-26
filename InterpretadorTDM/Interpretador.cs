@@ -7,8 +7,10 @@ namespace InterpretadorTDM
 	public class Interpretador
 	{
         private IdentificacaoECF identificacaoECF;
+        private IdentificacaoUsuario identificacaoUsuario;
 
         public IdentificacaoECF IdentificacaoECF => identificacaoECF;
+        public IdentificacaoUsuario IdentificacaoUsuario => identificacaoUsuario;
 
 		private Interpretador(string caminho)
 		{
@@ -25,12 +27,16 @@ namespace InterpretadorTDM
                 case TipoRegistro.E01_IdentificacaoECF:
                     identificacaoECF = IdentificacaoECF.InterpretaLinha(linha);
                     break;
+                
+                case TipoRegistro.E02_IdentificacaoUsuario:
+                    identificacaoUsuario = IdentificacaoUsuario.InterpretaLinha(linha);
+                    break;
             }
         }
 
         private TipoRegistro ObterTipoRegistro(string linha)
         {
-            return TipoRegistro.E01_IdentificacaoECF;
+            return (TipoRegistro) int.Parse(linha.Substring(1, 2));
         }
 
 		public static Interpretador InterpretaArquivo(string caminho)

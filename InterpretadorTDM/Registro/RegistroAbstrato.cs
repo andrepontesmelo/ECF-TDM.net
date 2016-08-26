@@ -41,6 +41,15 @@ namespace InterpretadorTDM
         {
             return int.Parse(Ler(posInicial, posFinal));
         }
+
+        protected decimal LerDecimal(int posInicial, int posFinal, int casasDecimais)
+        {
+            string decimalComSeparacao = Ler(posInicial, posFinal - casasDecimais) + "," + 
+                Ler(posFinal - casasDecimais, posFinal);
+
+            return decimal.Parse(decimalComSeparacao);
+        }
+
     }
 }
 
