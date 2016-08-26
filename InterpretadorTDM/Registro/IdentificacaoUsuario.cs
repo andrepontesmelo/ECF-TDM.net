@@ -27,7 +27,7 @@ namespace InterpretadorTDM
             inscricaoEstadual = Ler(59, 72);
             nomeContribuinte = Ler(72, 112);
             endereco = Ler(112, 233);
-            dataHoraCadastro = LerDataHora(233, 247);
+            dataHoraCadastro = LerDataHora(233, 247).Value;
             contadorReinicioOperacao = LerInteiro(247, 253);
             totalizadorGeral = LerDecimal(253, 271, 2);
             numeroUsuario = LerInteiro(271, 273);

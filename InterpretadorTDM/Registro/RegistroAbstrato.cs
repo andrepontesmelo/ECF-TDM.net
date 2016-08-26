@@ -20,9 +20,14 @@ namespace InterpretadorTDM
             return linhaCrua.Substring(posInicial - 1, posFinal - posInicial);
         }
 
-        protected DateTime LerDataHora(int posInicial, int posFinal)
+        protected DateTime? LerDataHora(int posInicial, int posFinal)
         {
-            return DateTime.ParseExact(Ler(posInicial, posFinal), "yyyyMMddHHmmss", 
+            string texto = Ler(posInicial, posFinal);
+
+            if (String.IsNullOrWhiteSpace(texto))
+                return null;
+            
+            return DateTime.ParseExact(texto, "yyyyMMddHHmmss", 
                 CultureInfo.InvariantCulture);
         }
 

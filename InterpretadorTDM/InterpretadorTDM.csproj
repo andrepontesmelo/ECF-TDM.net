@@ -39,6 +39,7 @@
     <Compile Include="Registro\IdentificacaoUsuario.cs" />
     <Compile Include="Registro\Identificacao.cs" />
     <Compile Include="Registro\RelacaoCodificacoesGT.cs" />
+    <Compile Include="Registro\RelacaoSimbolosMoeda.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

@@ -9,10 +9,11 @@ namespace InterpretadorTDM
         private IdentificacaoECF identificacaoECF;
         private IdentificacaoUsuario identificacaoUsuario;
         private List<RelacaoCodificacoesGT> relacoesCodificacoesGT = new List<RelacaoCodificacoesGT>();
+        private List<RelacaoSimbolosMoeda> relacaoSimbolosMoeda = new List<RelacaoSimbolosMoeda>();
 
         public IdentificacaoECF IdentificacaoECF => identificacaoECF;
         public IdentificacaoUsuario IdentificacaoUsuario => identificacaoUsuario;
-        public List<RelacaoCodificacoesGT> RelacoesCodificacoesGT => relacoesCodificacoesGT;
+        public List<RelacaoSimbolosMoeda> RelacoesSimbolosMoeda => relacaoSimbolosMoeda;
 
 		private Interpretador(string caminho)
 		{
@@ -36,6 +37,10 @@ namespace InterpretadorTDM
 
                 case TipoRegistro.E05_RelacaoCodificacoesGT:
                     relacoesCodificacoesGT.Add(RelacaoCodificacoesGT.InterpretaLinha(linha));
+                    break;
+
+                case TipoRegistro.E06_RelacaoSimbolosMoeda:
+                    relacaoSimbolosMoeda.Add(RelacaoSimbolosMoeda.InterpretaLinha(linha));
                     break;
 
                 default:

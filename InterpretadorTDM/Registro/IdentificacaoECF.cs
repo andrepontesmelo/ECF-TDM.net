@@ -37,7 +37,7 @@ namespace InterpretadorTDM
             marcaECF = Ler(32, 52);
             modeloECF = Ler(52, 72);
             versaoSB = Ler(72, 82);
-            dataHoraGravacaoSB = LerDataHora(82, 96);
+            dataHoraGravacaoSB = LerDataHora(82, 96).Value;
             numeroSequencialECF = LerInteiro(96, 99);
             cnpjUsuario = Ler(99, 113);
             comandoGeracao = Ler(113, 116);

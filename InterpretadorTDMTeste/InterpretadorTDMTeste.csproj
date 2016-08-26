@@ -37,6 +37,7 @@
     <Compile Include="IdentificacaoECFTeste.cs" />
     <Compile Include="IdentificacaoUsuarioTeste.cs" />
     <Compile Include="RelacaoCodificacoesGTTeste.cs" />
+    <Compile Include="RelacaoSimbolosMoedaTeste.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

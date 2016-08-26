@@ -14,7 +14,7 @@ namespace InterpretadorTDM
         {
             tipoRegistro = TipoRegistro.E05_RelacaoCodificacoesGT;
 
-            dataHoraGravacao = LerDataHora(59, 73);
+            dataHoraGravacao = LerDataHora(59, 73).Value;
             codificador = Ler(73, 83);
         }
 
