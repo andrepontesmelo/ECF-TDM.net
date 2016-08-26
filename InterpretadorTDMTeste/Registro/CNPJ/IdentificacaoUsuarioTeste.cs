@@ -3,8 +3,9 @@ using System;
 using InterpretadorTDM;
 using System.IO;
 using System.Reflection;
+using InterpretadorTDM.Registro.CNPJ;
 
-namespace InterpretadorTDMTeste
+namespace InterpretadorTDMTeste.Registro.CNPJ
 {
     [TestFixture()]
     public class IdentificacaoUsuarioTeste

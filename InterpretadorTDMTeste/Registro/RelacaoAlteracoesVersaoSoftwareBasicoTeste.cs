@@ -3,27 +3,28 @@ using System;
 using InterpretadorTDM;
 using System.IO;
 using System.Reflection;
+using InterpretadorTDM.Registro;
 
-namespace InterpretadorTDMTeste
+namespace InterpretadorTDMTeste.Registro
 {
     [TestFixture()]
-    public class RelacaoCodificacoesGTTeste
+    public class RelacaoAlteracoesVersaoSoftwareBasicoTeste
     {
         private static readonly string ENTRADA = 
-            "E05BE0306SC95510616430A MP-2000 TH FI       1821932900010320080508172906QWERTYUIOP";
+            "E07BE0306SC95510616430A MP-2000 TH FI       01.03.02  20080409";
 
-        private RelacaoCodificacoesGT lido;
+        private RelacaoAlteracoesVersaoSoftwareBasico lido;
 
         [SetUp()]
         public void Setup() 
         {
-            lido = RelacaoCodificacoesGT.InterpretaLinha(ENTRADA);
+            lido = RelacaoAlteracoesVersaoSoftwareBasico.InterpretaLinha(ENTRADA);
         }
 
         [Test()]
         public void DeveLerTipoRegistro()
         {
-            Assert.AreEqual(TipoRegistro.E05_RelacaoCodificacoesGT, lido.TipoRegistro);
+            Assert.AreEqual(TipoRegistro.E07_RelacaoAlteracoesVersaoSoftwareBasico, lido.TipoRegistro);
         }
 
         [Test()]
@@ -45,22 +46,15 @@ namespace InterpretadorTDMTeste
         }
 
         [Test()]
-        public void DeveLerCNPJ()
+        public void DeveLerVersaoSB()
         {
-            Assert.AreEqual("18219329000103", lido.CNPJUsuario);
+            Assert.AreEqual("01.03.02  ", lido.VersaoSB);
         }
 
         [Test()]
-        public void DeveLerDataHoraGravacao()
+        public void DeveLerDataGravacao()
         {
-            Assert.AreEqual(DateTime.Parse("2008-05-08 17:29:06"), lido.DataHoraGravacao);
+            Assert.AreEqual(DateTime.Parse("2008-04-09"), lido.DataGravacao);
         }
-
-        [Test()]
-        public void DeveLerCodificador()
-        {
-            Assert.AreEqual("QWERTYUIOP", lido.Codificador);
-        }
-
     }
 }

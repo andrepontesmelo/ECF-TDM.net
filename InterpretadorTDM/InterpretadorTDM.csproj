@@ -34,18 +34,19 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Interpretador.cs" />
     <Compile Include="TipoRegistro.cs" />
-    <Compile Include="Registro\IdentificacaoECF.cs" />
     <Compile Include="Registro\RegistroAbstrato.cs" />
-    <Compile Include="Registro\IdentificacaoUsuario.cs" />
-    <Compile Include="Registro\RelacaoCodificacoesGT.cs" />
-    <Compile Include="Registro\RelacaoSimbolosMoeda.cs" />
     <Compile Include="Registro\RelacaoAlteracoesVersaoSoftwareBasico.cs" />
-    <Compile Include="Registro\RelacaoDispositivosMFD.cs" />
     <Compile Include="Registro\RelacaoIntervencoesTecnicas.cs" />
-    <Compile Include="Registro\RegistroCNPJ.cs" />
+    <Compile Include="Registro\CNPJ\IdentificacaoECF.cs" />
+    <Compile Include="Registro\CNPJ\IdentificacaoUsuario.cs" />
+    <Compile Include="Registro\CNPJ\RegistroCNPJ.cs" />
+    <Compile Include="Registro\CNPJ\RelacaoCodificacoesGT.cs" />
+    <Compile Include="Registro\CNPJ\RelacaoDispositivosMFD.cs" />
+    <Compile Include="Registro\CNPJ\RelacaoSimbolosMoeda.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Registro\" />
+    <Folder Include="Registro\CNPJ\" />
   </ItemGroup>
 </Project>

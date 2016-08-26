@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace InterpretadorTDM
+namespace InterpretadorTDM.Registro
 {
     public abstract class RegistroAbstrato
     {

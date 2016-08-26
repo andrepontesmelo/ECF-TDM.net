@@ -34,13 +34,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IdentificacaoECFTeste.cs" />
-    <Compile Include="IdentificacaoUsuarioTeste.cs" />
-    <Compile Include="RelacaoCodificacoesGTTeste.cs" />
-    <Compile Include="RelacaoSimbolosMoedaTeste.cs" />
-    <Compile Include="RelacaoAlteracoesVersaoSoftwareBasicoTeste.cs" />
-    <Compile Include="RelacaoDispositivosMFDTeste.cs" />
-    <Compile Include="RelacaoIntervencoesTecnicasTeste.cs" />
+    <Compile Include="Registro\CNPJ\IdentificacaoECFTeste.cs" />
+    <Compile Include="Registro\CNPJ\IdentificacaoUsuarioTeste.cs" />
+    <Compile Include="Registro\CNPJ\RelacaoCodificacoesGTTeste.cs" />
+    <Compile Include="Registro\CNPJ\RelacaoDispositivosMFDTeste.cs" />
+    <Compile Include="Registro\CNPJ\RelacaoSimbolosMoedaTeste.cs" />
+    <Compile Include="Registro\RelacaoAlteracoesVersaoSoftwareBasicoTeste.cs" />
+    <Compile Include="Registro\RelacaoIntervencoesTecnicasTeste.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -51,5 +51,9 @@
       <Project>{FDABC857-030C-4A69-A9CD-46FC1820352F}</Project>
       <Name>InterpretadorTDM</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Registro\" />
+    <Folder Include="Registro\CNPJ\" />
   </ItemGroup>
 </Project>

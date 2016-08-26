@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace InterpretadorTDM
+namespace InterpretadorTDM.Registro.CNPJ
 {
     public class RelacaoCodificacoesGT : RegistroCNPJ
     {

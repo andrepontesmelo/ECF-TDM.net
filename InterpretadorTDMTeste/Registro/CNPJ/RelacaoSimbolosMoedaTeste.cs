@@ -3,27 +3,28 @@ using System;
 using InterpretadorTDM;
 using System.IO;
 using System.Reflection;
+using InterpretadorTDM.Registro.CNPJ;
 
-namespace InterpretadorTDMTeste
+namespace InterpretadorTDMTeste.Registro.CNPJ
 {
     [TestFixture()]
-    public class RelacaoAlteracoesVersaoSoftwareBasicoTeste
+    public class RelacaoSimbolosMoedaTeste
     {
         private static readonly string ENTRADA = 
-            "E07BE0306SC95510616430A MP-2000 TH FI       01.03.02  20080409";
+            "E06BE0306SC95510616430A MP-2000 TH FI       18219329000103               R  ";
 
-        private RelacaoAlteracoesVersaoSoftwareBasico lido;
+        private RelacaoSimbolosMoeda lido;
 
         [SetUp()]
         public void Setup() 
         {
-            lido = RelacaoAlteracoesVersaoSoftwareBasico.InterpretaLinha(ENTRADA);
+            lido = RelacaoSimbolosMoeda.InterpretaLinha(ENTRADA);
         }
 
         [Test()]
         public void DeveLerTipoRegistro()
         {
-            Assert.AreEqual(TipoRegistro.E07_RelacaoAlteracoesVersaoSoftwareBasico, lido.TipoRegistro);
+            Assert.AreEqual(TipoRegistro.E06_RelacaoSimbolosMoeda, lido.TipoRegistro);
         }
 
         [Test()]
@@ -45,15 +46,21 @@ namespace InterpretadorTDMTeste
         }
 
         [Test()]
-        public void DeveLerVersaoSB()
+        public void DeveLerDataHoraGravacao()
         {
-            Assert.AreEqual("01.03.02  ", lido.VersaoSB);
+            Assert.IsNull(lido.DataHoraGravacao);
         }
 
         [Test()]
-        public void DeveLerDataGravacao()
+        public void DeveLerCNPJ()
         {
-            Assert.AreEqual(DateTime.Parse("2008-04-09"), lido.DataGravacao);
+            Assert.AreEqual("18219329000103", lido.CNPJUsuario);
+        }
+
+        [Test()]
+        public void DeveLerSimboloMoeda()
+        {
+            Assert.AreEqual(" R  ", lido.SimboloMoeda);
         }
     }
 }

@@ -3,8 +3,9 @@ using System;
 using InterpretadorTDM;
 using System.IO;
 using System.Reflection;
+using InterpretadorTDM.Registro;
 
-namespace InterpretadorTDMTeste
+namespace InterpretadorTDMTeste.Registro
 {
     [TestFixture()]
     public class RelacaoIntervencoesTecnicasTeste
