@@ -42,6 +42,7 @@
     <Compile Include="Registro\RelacaoAlteracoesVersaoSoftwareBasicoTeste.cs" />
     <Compile Include="Registro\RelacaoIntervencoesTecnicasTeste.cs" />
     <Compile Include="Registro\CNPJ\RelacaoFitasDetalheEmitidasTeste.cs" />
+    <Compile Include="Registro\PosicaoAtualTotalizadoresTeste.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

@@ -63,6 +63,11 @@ namespace InterpretadorTDM.Registro
             return int.Parse(Ler(posInicial, posFinal));
         }
 
+        protected int LerInteiro6Digitos(int posInicial)
+        {
+            return int.Parse(Ler(posInicial, posInicial + 6));
+        }
+
         protected decimal LerDecimal(int posInicial, int posFinal, int casasDecimais)
         {
             string decimalComSeparacao = Ler(posInicial, posFinal - casasDecimais) + "," + 

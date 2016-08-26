@@ -44,6 +44,7 @@
     <Compile Include="Registro\CNPJ\RelacaoDispositivosMFD.cs" />
     <Compile Include="Registro\CNPJ\RelacaoSimbolosMoeda.cs" />
     <Compile Include="Registro\CNPJ\RelacaoFitasDetalheEmitidas.cs" />
+    <Compile Include="Registro\PosicaoAtualTotalizadores.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
