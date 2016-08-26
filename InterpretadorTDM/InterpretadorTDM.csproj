@@ -32,7 +32,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Somador.cs" />
+    <Compile Include="Interpretador.cs" />
+    <Compile Include="TipoRegistro.cs" />
+    <Compile Include="Registro\IdentificacaoECF.cs" />
+    <Compile Include="Registro\RegistroAbstrato.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Registro\" />
+  </ItemGroup>
 </Project>
