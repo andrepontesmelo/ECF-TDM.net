@@ -77,11 +77,9 @@ namespace InterpretadorTDM.Registro
             {
                 case "S":
                     return true;
-                    break;
 
                 case "N":
                     return false;
-                    break;
 
                 default:
                     throw new NotImplementedException();
