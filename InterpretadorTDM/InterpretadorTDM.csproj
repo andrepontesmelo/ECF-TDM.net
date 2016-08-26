@@ -37,11 +37,12 @@
     <Compile Include="Registro\IdentificacaoECF.cs" />
     <Compile Include="Registro\RegistroAbstrato.cs" />
     <Compile Include="Registro\IdentificacaoUsuario.cs" />
-    <Compile Include="Registro\Identificacao.cs" />
     <Compile Include="Registro\RelacaoCodificacoesGT.cs" />
     <Compile Include="Registro\RelacaoSimbolosMoeda.cs" />
     <Compile Include="Registro\RelacaoAlteracoesVersaoSoftwareBasico.cs" />
     <Compile Include="Registro\RelacaoDispositivosMFD.cs" />
+    <Compile Include="Registro\RelacaoIntervencoesTecnicas.cs" />
+    <Compile Include="Registro\RegistroCNPJ.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
