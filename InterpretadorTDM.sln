@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDMParserTeste", "TDMParserTeste\TDMParserTeste.csproj", "{C167F70A-12B0-4FBC-9A05-23624A4B3A00}"
+Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "InterpretadorTDMTeste", "InterpretadorTDMTeste\InterpretadorTDMTeste.csproj", "{C167F70A-12B0-4FBC-9A05-23624A4B3A00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDMParser", "TDMParser\TDMParser.csproj", "{FDABC857-030C-4A69-A9CD-46FC1820352F}"
+Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "InterpretadorTDM", "InterpretadorTDM\InterpretadorTDM.csproj", "{FDABC857-030C-4A69-A9CD-46FC1820352F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,8 +1,8 @@
 ﻿using NUnit.Framework;
 using System;
-using TDMParser;
+using InterpretadorTDM;
 
-namespace TDMParserTeste
+namespace InterpretadorTDMTeste
 {
 	[TestFixture ()]
 	public class Test
@@ -14,4 +14,3 @@ namespace TDMParserTeste
 		}
 	}
 }
-

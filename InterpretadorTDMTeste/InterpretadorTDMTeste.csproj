@@ -5,8 +5,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{C167F70A-12B0-4FBC-9A05-23624A4B3A00}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>TDPParserTest</RootNamespace>
-    <AssemblyName>TDPParserTest</AssemblyName>
+    <RootNamespace>InterpretadorTDMTeste</RootNamespace>
+    <AssemblyName>InterpretadorTDMTeste</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -41,9 +41,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TDMParser\TDMParser.csproj">
+    <ProjectReference Include="..\InterpretadorTDM\InterpretadorTDM.csproj">
       <Project>{FDABC857-030C-4A69-A9CD-46FC1820352F}</Project>
-      <Name>TDMParser</Name>
+      <Name>InterpretadorTDM</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TDMParser
+namespace InterpretadorTDM
 {
 	public class Somador
 	{
