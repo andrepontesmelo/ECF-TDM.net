@@ -44,6 +44,7 @@
     <Compile Include="Registro\CNPJ\RelacaoFitasDetalheEmitidasTeste.cs" />
     <Compile Include="Registro\PosicaoAtualTotalizadoresTeste.cs" />
     <Compile Include="Registro\RelacaoReducoesZTeste.cs" />
+    <Compile Include="Registro\TotalizadoresParciaisTeste.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
