@@ -43,8 +43,8 @@ namespace InterpretadorTDM.Registro.CNPJ
             comandoGeracao = Ler(113, 116);
             crzInicial = LerInteiro(116, 122);
             crzFinal = LerInteiro(122, 128);
-            dataInicial = LerData(128, 136);
-            dataFinal = LerData(136, 144);
+            dataInicial = LerData(128, 136).Value;
+            dataFinal = LerData(136, 144).Value;
             versaoBiblioteca = Ler(144, 152);
             versaoAto = Ler(152, 167);
         }

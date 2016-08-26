@@ -14,7 +14,7 @@ namespace InterpretadorTDM.Registro
         {
             tipoRegistro = TipoRegistro.E07_RelacaoAlteracoesVersaoSoftwareBasico;
             versaoSB = Ler(45, 55);
-            dataGravacao = LerData(55, 63);
+            dataGravacao = LerData(55, 63).Value;
         }
 
         public static RelacaoAlteracoesVersaoSoftwareBasico InterpretaLinha(string linha)

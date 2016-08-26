@@ -42,9 +42,14 @@ namespace InterpretadorTDM.Registro
                 CultureInfo.InvariantCulture);
         }
 
-        protected DateTime LerData(int posInicial, int posFinal)
+        protected DateTime? LerData(int posInicial, int posFinal)
         {
-            return DateTime.ParseExact(Ler(posInicial, posFinal), "yyyyMMdd", 
+            string texto = Ler(posInicial, posFinal);
+
+            if (String.IsNullOrWhiteSpace(texto))
+                return null;
+            
+            return DateTime.ParseExact(texto, "yyyyMMdd", 
                 CultureInfo.InvariantCulture);
         }
 

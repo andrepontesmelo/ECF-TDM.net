@@ -41,6 +41,7 @@
     <Compile Include="Registro\CNPJ\RelacaoSimbolosMoedaTeste.cs" />
     <Compile Include="Registro\RelacaoAlteracoesVersaoSoftwareBasicoTeste.cs" />
     <Compile Include="Registro\RelacaoIntervencoesTecnicasTeste.cs" />
+    <Compile Include="Registro\CNPJ\RelacaoFitasDetalheEmitidasTeste.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
