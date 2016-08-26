@@ -2,7 +2,7 @@
 
 namespace InterpretadorTDM
 {
-    public class RelacaoCodificacoesGT : Identificacao
+    public class RelacaoCodificacoesGT : RegistroCNPJ
     {
         private DateTime dataHoraGravacao;
         private string codificador;

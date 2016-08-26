@@ -2,7 +2,7 @@
 
 namespace InterpretadorTDM
 {
-    public class RelacaoAlteracoesVersaoSoftwareBasico : Identificacao
+    public class RelacaoAlteracoesVersaoSoftwareBasico : RegistroAbstrato
     {
         private DateTime dataGravacao;
         private string versaoSB;

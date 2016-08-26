@@ -2,7 +2,7 @@
 
 namespace InterpretadorTDM
 {
-    public class RelacaoDispositivosMFD : Identificacao
+    public class RelacaoDispositivosMFD : RegistroCNPJ
     {
         private string numeroSerieMFD;
 

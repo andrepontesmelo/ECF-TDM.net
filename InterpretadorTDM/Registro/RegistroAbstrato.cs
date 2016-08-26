@@ -7,10 +7,21 @@ namespace InterpretadorTDM
     {
         protected string linhaCrua;
         protected TipoRegistro tipoRegistro;
+        private string numeroFabricacao;
+        private char mfAdicional;
+        protected string modeloECF;
+
+        public string NumeroFabricacao => numeroFabricacao;
+        public char MFAdicional => mfAdicional;
+        public string ModeloECF => modeloECF;
+
 
         protected RegistroAbstrato(string linha)
         {
             this.linhaCrua = linha;
+            numeroFabricacao = Ler(4, 23);
+            mfAdicional = Ler(24);
+            modeloECF = Ler(25, 45);
         }
 
         public TipoRegistro TipoRegistro => tipoRegistro;
@@ -55,6 +66,22 @@ namespace InterpretadorTDM
             return decimal.Parse(decimalComSeparacao);
         }
 
+        protected bool LerBooleano(int posicao)
+        {
+            switch (linhaCrua[posicao - 1].ToString().ToUpper())
+            {
+                case "S":
+                    return true;
+                    break;
+
+                case "N":
+                    return false;
+                    break;
+
+                default:
+                    throw new NotImplementedException();
+            }
+        }
     }
 }
 

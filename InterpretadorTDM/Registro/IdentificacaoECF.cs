@@ -2,7 +2,7 @@
 
 namespace InterpretadorTDM
 {
-    public class IdentificacaoECF : Identificacao
+    public class IdentificacaoECF : RegistroCNPJ
     {
         private string tipoECF;
         private string marcaECF;

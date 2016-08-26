@@ -2,7 +2,7 @@
 
 namespace InterpretadorTDM
 {
-    public class RelacaoSimbolosMoeda : Identificacao
+    public class RelacaoSimbolosMoeda : RegistroCNPJ
     {
         private DateTime? dataHoraGravacao;
         private string simboloMoeda;

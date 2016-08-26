@@ -2,7 +2,7 @@
 
 namespace InterpretadorTDM
 {
-    public class IdentificacaoUsuario : Identificacao
+    public class IdentificacaoUsuario : RegistroCNPJ
     {
         private string inscricaoEstadual;
         private string nomeContribuinte;
