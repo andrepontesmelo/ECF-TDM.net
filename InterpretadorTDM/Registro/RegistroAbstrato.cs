@@ -42,6 +42,11 @@ namespace InterpretadorTDM.Registro
                 CultureInfo.InvariantCulture);
         }
 
+        protected DateTime? LerData(int posInicial)
+        {
+            return LerData(posInicial, posInicial + 8);
+        }
+
         protected DateTime? LerData(int posInicial, int posFinal)
         {
             string texto = Ler(posInicial, posFinal);

@@ -16,7 +16,7 @@ namespace InterpretadorTDM
         E09_RelacaoIntervencoesTecnicas = 9,
         E10_RelacaoFitasDetalheEmitidas = 10,
         E11_PosicaoAtualTotalizadores = 11,
-        E12_RelcaoReducoesZ = 12,
+        E12_RelacaoReducoesZ = 12,
         E13_TotalizadoresParciais = 13,
         E14_CupomFiscal = 14,
         E15_DetalheCupomFiscal = 15,
