@@ -18,6 +18,8 @@ namespace InterpretadorTDM
         {
             numeroFabricacao = Ler(4, 23);
             mfAdicional = Ler(24);
+            modeloECF = Ler(25, 45);
+            cnpjUsuario = Ler(45, 59);
         }
     }
 }

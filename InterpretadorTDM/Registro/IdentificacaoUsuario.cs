@@ -23,8 +23,7 @@ namespace InterpretadorTDM
         private IdentificacaoUsuario(string linha) : base(linha)
         {
             tipoRegistro = TipoRegistro.E02_IdentificacaoUsuario;
-            modeloECF = Ler(25, 45);
-            cnpjUsuario = Ler(45, 59);
+
             inscricaoEstadual = Ler(59, 72);
             nomeContribuinte = Ler(72, 112);
             endereco = Ler(112, 233);

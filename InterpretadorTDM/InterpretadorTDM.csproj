@@ -38,6 +38,7 @@
     <Compile Include="Registro\RegistroAbstrato.cs" />
     <Compile Include="Registro\IdentificacaoUsuario.cs" />
     <Compile Include="Registro\Identificacao.cs" />
+    <Compile Include="Registro\RelacaoCodificacoesGT.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

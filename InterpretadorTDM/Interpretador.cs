@@ -8,9 +8,11 @@ namespace InterpretadorTDM
 	{
         private IdentificacaoECF identificacaoECF;
         private IdentificacaoUsuario identificacaoUsuario;
+        private List<RelacaoCodificacoesGT> relacoesCodificacoesGT = new List<RelacaoCodificacoesGT>();
 
         public IdentificacaoECF IdentificacaoECF => identificacaoECF;
         public IdentificacaoUsuario IdentificacaoUsuario => identificacaoUsuario;
+        public List<RelacaoCodificacoesGT> RelacoesCodificacoesGT => relacoesCodificacoesGT;
 
 		private Interpretador(string caminho)
 		{
@@ -31,6 +33,13 @@ namespace InterpretadorTDM
                 case TipoRegistro.E02_IdentificacaoUsuario:
                     identificacaoUsuario = IdentificacaoUsuario.InterpretaLinha(linha);
                     break;
+
+                case TipoRegistro.E05_RelacaoCodificacoesGT:
+                    relacoesCodificacoesGT.Add(RelacaoCodificacoesGT.InterpretaLinha(linha));
+                    break;
+
+                default:
+                    throw new NotImplementedException();
             }
         }
 
