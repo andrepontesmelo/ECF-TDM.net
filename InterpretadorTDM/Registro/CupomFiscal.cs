@@ -4,8 +4,8 @@ namespace InterpretadorTDM.Registro
 {
     public class CupomFiscal : RegistroAbstrato
     {
-        private int numeroUsuario;
         private int numeroContadorDocumentoEmitido;
+        private int numeroUsuario;
         private int coo;
         private DateTime dataInicioEmissao;
         private decimal subtotal, descontoSubtotal, acrescimoSubtotal;

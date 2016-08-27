@@ -50,6 +50,7 @@
     <Compile Include="Registro\CupomFiscal.cs" />
     <Compile Include="TipoValor.cs" />
     <Compile Include="TipoAplicacao.cs" />
+    <Compile Include="Registro\DetalheCupomFiscal.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
