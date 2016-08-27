@@ -86,7 +86,7 @@ namespace InterpretadorTDMTeste.Registro
         [Test()]
         public void DeveLerIndicadorCancelamento()
         {
-            Assert.AreEqual('N', lido.IndicadorEstorno);
+            Assert.AreEqual(TipoPagamento.Vazio, lido.IndicadorEstorno);
         }
 
         [Test()]

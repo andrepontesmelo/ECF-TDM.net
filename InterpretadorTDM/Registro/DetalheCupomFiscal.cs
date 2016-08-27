@@ -16,7 +16,7 @@ namespace InterpretadorTDM.Registro
         private decimal acrescimoItem;
         private decimal valorTotalLiquido;
         private string totalizadorParcial;
-        private char indicadorCancelamento;
+        private TipoPagamento indicadorCancelamento;
         private decimal quantidadeCancelada;
         private decimal valorCancelado;
         private decimal cancelamentoAcrescimoItem;
@@ -36,7 +36,7 @@ namespace InterpretadorTDM.Registro
         public decimal AcrescimoItem => acrescimoItem;
         public decimal ValorTotalLiquido => valorTotalLiquido;
         public string TotalizadorParcial => totalizadorParcial;
-        public char IndicadorCancelamento => indicadorCancelamento;
+        public TipoPagamento IndicadorCancelamento => indicadorCancelamento;
         public decimal QuantidadeCancelada => quantidadeCancelada;
         public decimal ValorCancelado => valorCancelado;
         public decimal CancelamentoAcrescimoItem => cancelamentoAcrescimoItem;
@@ -63,7 +63,7 @@ namespace InterpretadorTDM.Registro
             acrescimoItem = LerDecimal(202, 202+8, 2);
             valorTotalLiquido = LerDecimal(210, 210+14, 2);
             totalizadorParcial = Ler(224, 224+7);
-            indicadorCancelamento = Ler(231);
+            indicadorCancelamento = LerTipoPagamento(231);
             quantidadeCancelada = LerDecimal(232, 232+7, casasDecimaisQuantidade);
             valorCancelado = LerDecimal(239, 239+13, 2);
             cancelamentoAcrescimoItem = LerDecimal(252, 252+13, 2);

@@ -73,6 +73,22 @@ namespace InterpretadorTDM.Registro
             return Ler(posicao).ToString().ToUpper();;
         }
 
+        protected TipoPagamento LerTipoPagamento(int posicao)
+        {
+            switch (ObterLetra(posicao))
+            {
+                case "N":
+                    return TipoPagamento.Vazio;
+                case "S":
+                    return TipoPagamento.Total;
+                case "P":
+                    return TipoPagamento.Parcial;
+
+                default:
+                    throw new NotImplementedException(ObterLetra(posicao));
+            }
+        }
+
         protected TipoValor LerTipoValor(int posicao)
         {
             switch (ObterLetra(posicao))

@@ -57,6 +57,7 @@
     <Compile Include="Registro\MeioPagamento.cs" />
     <Compile Include="Registro\RegistroAbstratoIdentificado.cs" />
     <Compile Include="Registro\DetalheMeioPagamento.cs" />
+    <Compile Include="TipoPagamento.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

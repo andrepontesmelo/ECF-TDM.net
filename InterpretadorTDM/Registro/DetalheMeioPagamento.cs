@@ -8,7 +8,7 @@ namespace InterpretadorTDM.Registro
         private decimal valorPago;
         private decimal valorEstornado;
         private string meioPagamento;
-        private char indicadorEstorno;
+        private TipoPagamento indicadorEstorno;
 
         public int COO => coo;
         public int CCF => ccf;
@@ -16,7 +16,7 @@ namespace InterpretadorTDM.Registro
         public decimal ValorPago => valorPago;
         public decimal ValorEstornado => valorEstornado;
         public string MeioPagamento => meioPagamento;
-        public char IndicadorEstorno => indicadorEstorno;
+        public TipoPagamento IndicadorEstorno => indicadorEstorno;
 
         public DetalheMeioPagamento(string linha) : base(linha)
         {
@@ -27,7 +27,7 @@ namespace InterpretadorTDM.Registro
             gnf = LerInteiro6Digitos(59);
             meioPagamento = Ler(65, 65+15);
             valorPago = LerDecimal(80, 80+13, 2);
-            indicadorEstorno = Ler(93);
+            indicadorEstorno = LerTipoPagamento(93);
             valorEstornado = LerDecimal(94, 94+13, 2);
         }
 
