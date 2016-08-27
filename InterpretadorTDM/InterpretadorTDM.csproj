@@ -54,6 +54,8 @@
     <Compile Include="Registro\Relacao\RelacaoIntervencoesTecnicas.cs" />
     <Compile Include="Registro\Relacao\RelacaoReducoesZ.cs" />
     <Compile Include="Registro\Totalizadores\TotalizadoresAbstratos.cs" />
+    <Compile Include="Registro\MeioPagamento.cs" />
+    <Compile Include="Registro\RegistroAbstratoIdentificado.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
