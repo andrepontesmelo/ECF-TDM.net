@@ -20,7 +20,7 @@ namespace InterpretadorTDM
         E13_TotalizadoresParciais = 13,
         E14_CupomFiscal = 14,
         E15_DetalheCupomFiscal = 15,
-        E16_DamisDocumentosEmitidos = 16,
+        E16_DemaisDocumentosEmitidos = 16,
         E17_TotalizadoresNaoFiscais = 17,
         E18_MeiosPagamentoETroco = 18,
         E19_DocumentoNaoFiscal = 19,
