@@ -47,10 +47,15 @@ namespace InterpretadorTDM
 
 		private Interpretador(string caminho)
 		{
-            IEnumerable<string> linhas = File.ReadLines(caminho);   
+            string[] linhas = File.ReadAllLines(caminho);   
 
-            foreach (string linha in linhas)
-                InterpretaLinha(linha);
+            for (int x = 0; x < linhas.Length; x++)
+            {
+                bool ultimaLinha = (x == linhas.Length - 1);
+
+                if (!ultimaLinha)
+                    InterpretaLinha(linhas[x]);
+            }
 		}
 
         private void InterpretaLinha(string linha)
