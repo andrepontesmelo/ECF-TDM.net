@@ -50,6 +50,7 @@
     <Compile Include="Registro\Relacao\RelacaoIntervencoesTecnicasTeste.cs" />
     <Compile Include="Registro\Relacao\RelacaoReducoesZTeste.cs" />
     <Compile Include="Registro\MeioPagamentoTeste.cs" />
+    <Compile Include="Registro\DetalheMeioPagamentoTeste.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
