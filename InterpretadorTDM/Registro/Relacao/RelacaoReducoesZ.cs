@@ -2,15 +2,13 @@
 
 namespace InterpretadorTDM.Registro.Relacao
 {
-    public class RelacaoReducoesZ : RegistroAbstrato
+    public class RelacaoReducoesZ : RegistroAbstratoIdentificado
     {
-        private int numeroUsuario;
         private int crz, coo, cro;
         private DateTime dataMovimento;
         private decimal vendaBrutaDiaria;
         private bool incidenciaDescontoISSQN;
 
-        public int NumeroUsuario => numeroUsuario;
         public int CRZ => crz;
         public int COO => coo;
         public int CRO => cro;
@@ -22,7 +20,6 @@ namespace InterpretadorTDM.Registro.Relacao
         {
             tipoRegistro = TipoRegistro.E12_RelacaoReducoesZ;
 
-            numeroUsuario = LerInteiro(45, 47);
             crz = LerInteiro6Digitos(47);
             coo = LerInteiro6Digitos(53);
             cro = LerInteiro6Digitos(59);

@@ -2,9 +2,8 @@
 
 namespace InterpretadorTDM.Registro
 {
-    public class DetalheCupomFiscal : RegistroAbstrato
+    public class DetalheCupomFiscal : RegistroAbstratoIdentificado
     {
-        private int numeroUsuario;
         private int coo;
         private int numeroContadorDocumento;
         private int numeroItem;
@@ -23,7 +22,6 @@ namespace InterpretadorTDM.Registro
         private decimal cancelamentoAcrescimoItem;
         private char indicadorArredondamentoTruncamento;
 
-        public int NumeroUsuario => numeroUsuario;
         public int COO => coo;
         public int NumeroContadorDocumento => numeroContadorDocumento;
         public int NumeroItem => numeroItem;
@@ -48,7 +46,6 @@ namespace InterpretadorTDM.Registro
         public DetalheCupomFiscal(string linha) : base(linha)
         {
             tipoRegistro = TipoRegistro.E15_DetalheCupomFiscal;
-            numeroUsuario = LerInteiro(45, 47);
             coo = LerInteiro6Digitos(47);
             numeroContadorDocumento = LerInteiro6Digitos(53);
             numeroItem = LerInteiro(59, 62);

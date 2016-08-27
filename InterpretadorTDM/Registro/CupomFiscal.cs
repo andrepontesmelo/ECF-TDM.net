@@ -2,10 +2,9 @@
 
 namespace InterpretadorTDM.Registro
 {
-    public class CupomFiscal : RegistroAbstrato
+    public class CupomFiscal : RegistroAbstratoIdentificado
     {
         private int numeroContadorDocumentoEmitido;
-        private int numeroUsuario;
         private int coo;
         private DateTime dataInicioEmissao;
         private decimal subtotal, descontoSubtotal, acrescimoSubtotal;
@@ -15,7 +14,6 @@ namespace InterpretadorTDM.Registro
         private TipoAplicacao ordemPrimeiroAcrescimo;
         private string nomeAdquirente, cpfCnpjAdquirente;
 
-        public int NumeroUsuario => numeroUsuario;
         public int NumeroContadorDocumentoEmitido => numeroContadorDocumentoEmitido;
         public int COO => coo;
         public DateTime DataInicioEmissao => dataInicioEmissao;
@@ -34,7 +32,6 @@ namespace InterpretadorTDM.Registro
         public CupomFiscal(string linha) : base(linha)
         {
             tipoRegistro = TipoRegistro.E14_CupomFiscal;
-            numeroUsuario = LerInteiro(45, 47);
             numeroContadorDocumentoEmitido = LerInteiro6Digitos(47);
             coo = LerInteiro6Digitos(53);
             dataInicioEmissao = LerData(59).Value;
