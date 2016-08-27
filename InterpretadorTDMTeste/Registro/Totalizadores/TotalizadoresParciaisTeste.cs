@@ -1,10 +1,6 @@
-﻿using NUnit.Framework;
-using System;
-using InterpretadorTDM;
-using System.IO;
-using System.Reflection;
-using InterpretadorTDM.Registro;
+﻿using InterpretadorTDM;
 using InterpretadorTDM.Registro.Totalizadores;
+using NUnit.Framework;
 
 namespace InterpretadorTDMTeste.Registro.Totalizadores
 {

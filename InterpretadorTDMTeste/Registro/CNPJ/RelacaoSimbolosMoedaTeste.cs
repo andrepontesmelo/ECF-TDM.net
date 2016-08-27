@@ -1,9 +1,6 @@
-﻿using NUnit.Framework;
-using System;
-using InterpretadorTDM;
-using System.IO;
-using System.Reflection;
+﻿using InterpretadorTDM;
 using InterpretadorTDM.Registro.CNPJ;
+using NUnit.Framework;
 
 namespace InterpretadorTDMTeste.Registro.CNPJ
 {

@@ -1,9 +1,7 @@
-﻿using NUnit.Framework;
-using System;
-using InterpretadorTDM;
-using System.IO;
-using System.Reflection;
+﻿using InterpretadorTDM;
 using InterpretadorTDM.Registro;
+using NUnit.Framework;
+using System;
 
 namespace InterpretadorTDMTeste.Registro
 {
