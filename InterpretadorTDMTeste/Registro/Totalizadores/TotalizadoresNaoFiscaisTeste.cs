@@ -3,28 +3,28 @@ using System;
 using InterpretadorTDM;
 using System.IO;
 using System.Reflection;
-using InterpretadorTDM.Registro;
+using InterpretadorTDM.Registro.Totalizadores;
 
-namespace InterpretadorTDMTeste.Registro
+namespace InterpretadorTDMTeste.Registro.Totalizadores
 {
     [TestFixture()]
-    public class TotalizadoresParciaisTeste
+    public class TotalizadoresNaoFiscaisTeste
     {
         private static readonly string ENTRADA = 
-            "E13BE0306SC95510616430A MP-2000 TH FI       01000225DT     9998887776655";
+            "E17BE0306SC95510616430A MP-2000 TH FI       01000239Suprimento     0000000000000";
 
-        private TotalizadoresParciais lido;
+        private TotalizadoresNaoFiscais lido;
 
         [SetUp()]
         public void Setup() 
         {
-            lido = TotalizadoresParciais.InterpretaLinha(ENTRADA);
+            lido = TotalizadoresNaoFiscais.InterpretaLinha(ENTRADA);
         }
 
         [Test()]
         public void DeveLerTipoRegistro()
         {
-            Assert.AreEqual(TipoRegistro.E13_TotalizadoresParciais, lido.TipoRegistro);
+            Assert.AreEqual(TipoRegistro.E17_TotalizadoresNaoFiscais, lido.TipoRegistro);
         }
 
         [Test()]
@@ -54,19 +54,19 @@ namespace InterpretadorTDMTeste.Registro
         [Test()]
         public void DeveLerCRZ()
         {
-            Assert.AreEqual(225, lido.CRZ);
+            Assert.AreEqual(239, lido.CRZ);
         }
 
         [Test()]
-        public void DeveLerValorParcial()
+        public void DeveLerTotalizador()
         {
-            Assert.AreEqual("DT     ", lido.TotalizadorParcial);
+            Assert.AreEqual("Suprimento     ", lido.Totalizador);
         }
 
         [Test()]
         public void DeveLerValorAcumulado()
         {
-            Assert.AreEqual(99988877766.55d, lido.ValorAcumulado);
+            Assert.AreEqual(0d, lido.ValorAcumulado);
         }
 
     }

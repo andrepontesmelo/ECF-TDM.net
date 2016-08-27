@@ -35,8 +35,6 @@
     <Compile Include="Interpretador.cs" />
     <Compile Include="TipoRegistro.cs" />
     <Compile Include="Registro\RegistroAbstrato.cs" />
-    <Compile Include="Registro\RelacaoAlteracoesVersaoSoftwareBasico.cs" />
-    <Compile Include="Registro\RelacaoIntervencoesTecnicas.cs" />
     <Compile Include="Registro\CNPJ\IdentificacaoECF.cs" />
     <Compile Include="Registro\CNPJ\IdentificacaoUsuario.cs" />
     <Compile Include="Registro\CNPJ\RegistroCNPJ.cs" />
@@ -45,17 +43,23 @@
     <Compile Include="Registro\CNPJ\RelacaoSimbolosMoeda.cs" />
     <Compile Include="Registro\CNPJ\RelacaoFitasDetalheEmitidas.cs" />
     <Compile Include="Registro\PosicaoAtualTotalizadores.cs" />
-    <Compile Include="Registro\RelacaoReducoesZ.cs" />
-    <Compile Include="Registro\TotalizadoresParciais.cs" />
     <Compile Include="Registro\CupomFiscal.cs" />
     <Compile Include="TipoValor.cs" />
     <Compile Include="TipoAplicacao.cs" />
     <Compile Include="Registro\DetalheCupomFiscal.cs" />
     <Compile Include="Registro\DemaisDocumentosEmitidos.cs" />
+    <Compile Include="Registro\Totalizadores\TotalizadoresNaoFiscais.cs" />
+    <Compile Include="Registro\Totalizadores\TotalizadoresParciais.cs" />
+    <Compile Include="Registro\Relacao\RelacaoAlteracoesVersaoSoftwareBasico.cs" />
+    <Compile Include="Registro\Relacao\RelacaoIntervencoesTecnicas.cs" />
+    <Compile Include="Registro\Relacao\RelacaoReducoesZ.cs" />
+    <Compile Include="Registro\Totalizadores\TotalizadoresAbstratos.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Registro\" />
     <Folder Include="Registro\CNPJ\" />
+    <Folder Include="Registro\Totalizadores\" />
+    <Folder Include="Registro\Relacao\" />
   </ItemGroup>
 </Project>

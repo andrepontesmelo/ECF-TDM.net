@@ -4,27 +4,28 @@ using InterpretadorTDM;
 using System.IO;
 using System.Reflection;
 using InterpretadorTDM.Registro;
+using InterpretadorTDM.Registro.Totalizadores;
 
-namespace InterpretadorTDMTeste.Registro
+namespace InterpretadorTDMTeste.Registro.Totalizadores
 {
     [TestFixture()]
-    public class RelacaoReducoesZTeste
+    public class TotalizadoresParciaisTeste
     {
         private static readonly string ENTRADA = 
-            "E12BE0306SC95510616430A MP-2000 TH FI       01000224001663000005201501052015010516384398765432123456S";
+            "E13BE0306SC95510616430A MP-2000 TH FI       01000225DT     9998887776655";
 
-        private RelacaoReducoesZ lido;
+        private TotalizadoresParciais lido;
 
         [SetUp()]
         public void Setup() 
         {
-            lido = RelacaoReducoesZ.InterpretaLinha(ENTRADA);
+            lido = TotalizadoresParciais.InterpretaLinha(ENTRADA);
         }
 
         [Test()]
         public void DeveLerTipoRegistro()
         {
-            Assert.AreEqual(TipoRegistro.E12_RelacaoReducoesZ, lido.TipoRegistro);
+            Assert.AreEqual(TipoRegistro.E13_TotalizadoresParciais, lido.TipoRegistro);
         }
 
         [Test()]
@@ -54,37 +55,19 @@ namespace InterpretadorTDMTeste.Registro
         [Test()]
         public void DeveLerCRZ()
         {
-            Assert.AreEqual(224, lido.CRZ);
+            Assert.AreEqual(225, lido.CRZ);
         }
 
         [Test()]
-        public void DeveLerCOO()
+        public void DeveLerTotalizador()
         {
-            Assert.AreEqual(1663, lido.COO);
+            Assert.AreEqual("DT     ", lido.Totalizador);
         }
 
         [Test()]
-        public void DeveLerCRO()
+        public void DeveLerValorAcumulado()
         {
-            Assert.AreEqual(5, lido.CRO);
-        }
-
-        [Test()]
-        public void DeveLerDataMovimento()
-        {
-            Assert.AreEqual(DateTime.Parse("2015-01-05"), lido.DataMovimento);
-        }
-
-        [Test()]
-        public void DeveLerVendaBrutaDiaria()
-        {
-            Assert.AreEqual(987654321234.56d, lido.VendaBrutaDiaria);
-        }
-
-        [Test()]
-        public void DeveLerIncidenciaDescontoISSQN()
-        {
-            Assert.AreEqual(true, lido.IncidenciaDescontoISSQN);
+            Assert.AreEqual(99988877766.55d, lido.ValorAcumulado);
         }
 
     }

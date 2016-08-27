@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using InterpretadorTDM.Registro.CNPJ;
 using InterpretadorTDM.Registro;
+using InterpretadorTDM.Registro.Relacao;
 
 namespace InterpretadorTDM
 {

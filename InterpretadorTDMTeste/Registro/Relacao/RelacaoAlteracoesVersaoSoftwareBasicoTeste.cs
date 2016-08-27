@@ -3,28 +3,28 @@ using System;
 using InterpretadorTDM;
 using System.IO;
 using System.Reflection;
-using InterpretadorTDM.Registro;
+using InterpretadorTDM.Registro.Relacao;
 
-namespace InterpretadorTDMTeste.Registro
+namespace InterpretadorTDMTeste.Registro.Relacao
 {
     [TestFixture()]
-    public class RelacaoIntervencoesTecnicasTeste
+    public class RelacaoAlteracoesVersaoSoftwareBasicoTeste
     {
         private static readonly string ENTRADA = 
-            "E09BE0306SC95510616430A MP-2000 TH FI       00000520141203092644S";
+            "E07BE0306SC95510616430A MP-2000 TH FI       01.03.02  20080409";
 
-        private RelacaoIntervencoesTecnicas lido;
+        private RelacaoAlteracoesVersaoSoftwareBasico lido;
 
         [SetUp()]
         public void Setup() 
         {
-            lido = RelacaoIntervencoesTecnicas.InterpretaLinha(ENTRADA);
+            lido = RelacaoAlteracoesVersaoSoftwareBasico.InterpretaLinha(ENTRADA);
         }
 
         [Test()]
         public void DeveLerTipoRegistro()
         {
-            Assert.AreEqual(TipoRegistro.E09_RelacaoIntervencoesTecnicas, lido.TipoRegistro);
+            Assert.AreEqual(TipoRegistro.E07_RelacaoAlteracoesVersaoSoftwareBasico, lido.TipoRegistro);
         }
 
         [Test()]
@@ -46,21 +46,15 @@ namespace InterpretadorTDMTeste.Registro
         }
 
         [Test()]
-        public void DeveLerContadorReinicioOperacao()
+        public void DeveLerVersaoSB()
         {
-            Assert.AreEqual(5, lido.ContadorReinicioOperacao);
+            Assert.AreEqual("01.03.02  ", lido.VersaoSB);
         }
 
         [Test()]
-        public void DeveLerDataHoraGravacao()
+        public void DeveLerDataGravacao()
         {
-            Assert.AreEqual(DateTime.Parse("2014-12-03 09:26:44"), lido.DataHoraGravacao);
-        }
-
-        [Test()]
-        public void DeveLerSimboloMoeda()
-        {
-            Assert.AreEqual(true, lido.IndicadorPerdaDadosMT);
+            Assert.AreEqual(DateTime.Parse("2008-04-09"), lido.DataGravacao);
         }
     }
 }

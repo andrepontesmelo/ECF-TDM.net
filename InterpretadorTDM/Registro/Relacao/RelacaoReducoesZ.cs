@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace InterpretadorTDM.Registro
+namespace InterpretadorTDM.Registro.Relacao
 {
     public class RelacaoReducoesZ : RegistroAbstrato
     {

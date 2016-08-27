@@ -39,15 +39,16 @@
     <Compile Include="Registro\CNPJ\RelacaoCodificacoesGTTeste.cs" />
     <Compile Include="Registro\CNPJ\RelacaoDispositivosMFDTeste.cs" />
     <Compile Include="Registro\CNPJ\RelacaoSimbolosMoedaTeste.cs" />
-    <Compile Include="Registro\RelacaoAlteracoesVersaoSoftwareBasicoTeste.cs" />
-    <Compile Include="Registro\RelacaoIntervencoesTecnicasTeste.cs" />
     <Compile Include="Registro\CNPJ\RelacaoFitasDetalheEmitidasTeste.cs" />
     <Compile Include="Registro\PosicaoAtualTotalizadoresTeste.cs" />
-    <Compile Include="Registro\RelacaoReducoesZTeste.cs" />
-    <Compile Include="Registro\TotalizadoresParciaisTeste.cs" />
     <Compile Include="Registro\CupomFiscalTeste.cs" />
     <Compile Include="Registro\DetalheCupomFiscalTeste.cs" />
     <Compile Include="Registro\DemaisDocumentosEmitidosTeste.cs" />
+    <Compile Include="Registro\Totalizadores\TotalizadoresNaoFiscaisTeste.cs" />
+    <Compile Include="Registro\Totalizadores\TotalizadoresParciaisTeste.cs" />
+    <Compile Include="Registro\Relacao\RelacaoAlteracoesVersaoSoftwareBasicoTeste.cs" />
+    <Compile Include="Registro\Relacao\RelacaoIntervencoesTecnicasTeste.cs" />
+    <Compile Include="Registro\Relacao\RelacaoReducoesZTeste.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -62,5 +63,7 @@
   <ItemGroup>
     <Folder Include="Registro\" />
     <Folder Include="Registro\CNPJ\" />
+    <Folder Include="Registro\Totalizadores\" />
+    <Folder Include="Registro\Relacao\" />
   </ItemGroup>
 </Project>
