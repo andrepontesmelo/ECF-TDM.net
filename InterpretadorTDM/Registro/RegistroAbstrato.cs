@@ -31,6 +31,11 @@ namespace InterpretadorTDM.Registro
             return linhaCrua.Substring(posInicial - 1, posFinal - posInicial);
         }
 
+        protected DateTime? LerDataHora(int posInicial)
+        {
+            return LerDataHora(posInicial, posInicial + 14);
+        }
+
         protected DateTime? LerDataHora(int posInicial, int posFinal)
         {
             string texto = Ler(posInicial, posFinal);

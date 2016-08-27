@@ -51,6 +51,7 @@
     <Compile Include="TipoValor.cs" />
     <Compile Include="TipoAplicacao.cs" />
     <Compile Include="Registro\DetalheCupomFiscal.cs" />
+    <Compile Include="Registro\DemaisDocumentosEmitidos.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
