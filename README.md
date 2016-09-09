@@ -3,6 +3,13 @@
 
 Interpretador de [arquivo fiscal TDM](https://www.confaz.fazenda.gov.br/legislacao/atos/2007/ac008_07) em C#.
 
+## Instalação
+
+Execute o seguinte código no console NuGet (Visual Studio -> Tools -> NuGet Package Manager -> Package Manager Console)
+```
+PM> Install-Package InterpretadorTDM
+```
+
 ## Exemplo de uso
 
 ```
@@ -24,4 +31,3 @@ public class Exemplo
  * .NET framework 4.5
  * Nuget - gerenciamento de pacotes.
  * NUnit 2.6.4 - testes unitários
- * *IDE Desenvolvimento:*  MonoDevelop
