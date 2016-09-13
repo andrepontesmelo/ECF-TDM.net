@@ -120,7 +120,7 @@ namespace InterpretadorTDM
                     break;
 
                 case TipoRegistro.E13_TotalizadoresParciais:
-                    totalizadoresParciais.Add(InterpretadorTDM.Registro.Totalizadores.TotalizadoresParciais.InterpretaLinha(linha));
+                    totalizadoresParciais.Add(Registro.Totalizadores.TotalizadoresParciais.InterpretaLinha(linha));
                     break;
 
                 case TipoRegistro.E14_CupomFiscal:
@@ -132,11 +132,11 @@ namespace InterpretadorTDM
                     break;
 
                 case TipoRegistro.E16_DemaisDocumentosEmitidos:
-                    demaisDocumentosEmitidos.Add(InterpretadorTDM.Registro.DemaisDocumentosEmitidos.InterpretaLinha(linha));
+                    demaisDocumentosEmitidos.Add(Registro.DemaisDocumentosEmitidos.InterpretaLinha(linha));
                     break;
 
                 case TipoRegistro.E17_TotalizadoresNaoFiscais:
-                    totalizadoresNaoFiscais.Add(InterpretadorTDM.Registro.Totalizadores.TotalizadoresNaoFiscais.InterpretaLinha(linha));
+                    totalizadoresNaoFiscais.Add(Registro.Totalizadores.TotalizadoresNaoFiscais.InterpretaLinha(linha));
                     break;
 
                 case TipoRegistro.E18_MeioPagamento:
