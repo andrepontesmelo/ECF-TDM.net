@@ -43,6 +43,6 @@ public class Exemplo
 ```
 
 ## Requisitos
- * .NET framework 4.5
+ * .NET framework 2.0 (versão mínima)
  * Nuget - gerenciamento de pacotes.
  * NUnit 2.6.4 - testes unitários

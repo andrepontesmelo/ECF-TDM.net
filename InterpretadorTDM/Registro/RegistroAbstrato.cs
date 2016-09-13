@@ -40,7 +40,7 @@ namespace InterpretadorTDM.Registro
         {
             string texto = Ler(posInicial, posFinal);
 
-            if (String.IsNullOrWhiteSpace(texto))
+            if (texto == null || texto.Trim().Length == 0)
                 return null;
             
             return DateTime.ParseExact(texto, "yyyyMMddHHmmss", 
@@ -56,7 +56,7 @@ namespace InterpretadorTDM.Registro
         {
             string texto = Ler(posInicial, posFinal);
 
-            if (String.IsNullOrWhiteSpace(texto))
+            if (texto == null || texto.Trim().Length == 0)
                 return null;
             
             return DateTime.ParseExact(texto, "yyyyMMdd", 
