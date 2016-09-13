@@ -63,6 +63,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InterpretadorTeste.cs" />
     <Compile Include="Registro\CNPJ\IdentificacaoECFTeste.cs" />
     <Compile Include="Registro\CNPJ\IdentificacaoUsuarioTeste.cs" />
     <Compile Include="Registro\CNPJ\RelacaoCodificacoesGTTeste.cs" />
