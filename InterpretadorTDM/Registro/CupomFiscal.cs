@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace InterpretadorTDM.Registro
 {
@@ -28,6 +29,10 @@ namespace InterpretadorTDM.Registro
         public TipoAplicacao OrdemPrimeiroAcrescimo => ordemPrimeiroAcrescimo;
         public string NomeAdquirente => nomeAdquirente;
         public string CPFCNPJAdquirente => cpfCnpjAdquirente;
+
+        private List<DetalheCupomFiscal> detalhes = new List<DetalheCupomFiscal>();
+
+        public List<DetalheCupomFiscal> Detalhes => detalhes;
 
         public CupomFiscal(string linha) : base(linha)
         {

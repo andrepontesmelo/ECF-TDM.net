@@ -46,8 +46,25 @@ namespace InterpretadorTDM
         public List<DetalheMeioPagamento> DetalhesMeioPagamento => detalhesMeioPagamento;
 
 		private Interpretador(string caminho)
-		{
-            string[] linhas = File.ReadAllLines(caminho);   
+        {
+            InterpretaEntidades(caminho);
+            InterpretaRelacionamentos();
+        }
+
+        private void InterpretaRelacionamentos()
+        {
+            Dictionary<int, CupomFiscal> hashCupons = new Dictionary<int, CupomFiscal>();
+
+            foreach (CupomFiscal cupom in cuponsFiscais)
+                hashCupons[cupom.COO] = cupom;
+
+            foreach (DetalheCupomFiscal detalhe in detalheCuponsFiscais)
+                hashCupons[detalhe.COO].Detalhes.Add(detalhe);
+        }
+
+        private void InterpretaEntidades(string caminho)
+        {
+            string[] linhas = File.ReadAllLines(caminho);
 
             for (int x = 0; x < linhas.Length; x++)
             {
@@ -56,7 +73,7 @@ namespace InterpretadorTDM
                 if (!ultimaLinha)
                     InterpretaLinha(linhas[x]);
             }
-		}
+        }
 
         private void InterpretaLinha(string linha)
         {
