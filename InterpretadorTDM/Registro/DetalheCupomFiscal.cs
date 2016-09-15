@@ -49,7 +49,7 @@ namespace InterpretadorTDM.Registro
             coo = LerInteiro6Digitos(47);
             numeroContadorDocumento = LerInteiro6Digitos(53);
             numeroItem = LerInteiro(59, 62);
-            codigoProdutoOuServico = Ler(61, 61+14);
+            codigoProdutoOuServico = Ler(62, 62+14);
             descricao = Ler(76, 176);
 
             casasDecimaisQuantidade = LerInteiro(266, 267);

@@ -73,7 +73,7 @@ namespace InterpretadorTDMTeste.Registro
         [Test()]
         public void DeveLerCodigoProdutoOuServico()
         {
-            Assert.AreEqual("10201011009406", lido.CodigoProdutoOuServico);
+            Assert.AreEqual("0201011009406 ", lido.CodigoProdutoOuServico);
         }
 
         [Test()]
