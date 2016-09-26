@@ -60,6 +60,9 @@ namespace InterpretadorTDM
 
             foreach (DetalheCupomFiscal detalhe in detalheCuponsFiscais)
                 hashCupons[detalhe.COO].Detalhes.Add(detalhe);
+
+            foreach (DetalheMeioPagamento pagamento in DetalhesMeioPagamento)
+                hashCupons[pagamento.COO].DetalhesMeioPagamentos.Add(pagamento);
         }
 
         private void InterpretaEntidades(string caminho)

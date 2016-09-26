@@ -31,8 +31,10 @@ namespace InterpretadorTDM.Registro
         public string CPFCNPJAdquirente => cpfCnpjAdquirente;
 
         private List<DetalheCupomFiscal> detalhes = new List<DetalheCupomFiscal>();
+        private List<DetalheMeioPagamento> detalhesMeioPagamentos = new List<DetalheMeioPagamento>();
 
         public List<DetalheCupomFiscal> Detalhes => detalhes;
+        public List<DetalheMeioPagamento> DetalhesMeioPagamentos => detalhesMeioPagamentos;
 
         public CupomFiscal(string linha) : base(linha)
         {
