@@ -58,11 +58,20 @@ namespace InterpretadorTDM
             foreach (CupomFiscal cupom in cuponsFiscais)
                 hashCupons[cupom.COO] = cupom;
 
-            foreach (DetalheCupomFiscal detalhe in detalheCuponsFiscais)
-                hashCupons[detalhe.COO].Detalhes.Add(detalhe);
+            InterpretaDetalhes(hashCupons);
+            InterpretaPagamentos(hashCupons);
+        }
 
+        private void InterpretaPagamentos(Dictionary<int, CupomFiscal> hashCupons)
+        {
             foreach (DetalheMeioPagamento pagamento in DetalhesMeioPagamento)
                 hashCupons[pagamento.COO].DetalhesMeioPagamentos.Add(pagamento);
+        }
+
+        private void InterpretaDetalhes(Dictionary<int, CupomFiscal> hashCupons)
+        {
+            foreach (DetalheCupomFiscal detalhe in detalheCuponsFiscais)
+                hashCupons[detalhe.COO].Detalhes.Add(detalhe);
         }
 
         private void InterpretaEntidades(string caminho)
@@ -168,4 +177,3 @@ namespace InterpretadorTDM
 		}
 	}
 }
-

@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="InterpretadorTeste.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registro\CNPJ\IdentificacaoECFTeste.cs" />
     <Compile Include="Registro\CNPJ\IdentificacaoUsuarioTeste.cs" />
     <Compile Include="Registro\CNPJ\RelacaoCodificacoesGTTeste.cs" />
