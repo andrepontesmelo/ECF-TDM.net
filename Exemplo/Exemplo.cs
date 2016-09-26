@@ -18,11 +18,17 @@ class Exemplo
         foreach (DetalheCupomFiscal detalhe in cupom.Detalhes)
         {
             Console.WriteLine(string.Format("Item #{0}", detalhe.NumeroItem));
-
+            Console.WriteLine(detalhe.CodigoProdutoOuServico);
+            Console.WriteLine(detalhe.Unidade);
             Console.WriteLine(detalhe.Descricao);
             Console.WriteLine(detalhe.Quantidade);
+            Console.WriteLine(detalhe.ValorUnitario.ToString("C"));
             Console.WriteLine(detalhe.ValorTotalLiquido.ToString("C"));
         }
+
+        Console.WriteLine(" ==== Pagamentos do Cupom Fiscal == ");
+        foreach (DetalheMeioPagamento pagamento in cupom.DetalhesMeioPagamentos)
+            Console.WriteLine(string.Format("R$ #{0} {1}", pagamento.ValorPago, pagamento.MeioPagamento));
 
         Console.ReadLine();
     }
