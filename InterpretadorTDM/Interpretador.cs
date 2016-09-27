@@ -65,13 +65,23 @@ namespace InterpretadorTDM
         private void InterpretaPagamentos(Dictionary<int, CupomFiscal> hashCupons)
         {
             foreach (DetalheMeioPagamento pagamento in DetalhesMeioPagamento)
-                hashCupons[pagamento.COO].DetalhesMeioPagamentos.Add(pagamento);
+            {
+                CupomFiscal cupom;
+
+                if (hashCupons.TryGetValue(pagamento.COO, out cupom))
+                    cupom.DetalhesMeioPagamentos.Add(pagamento);
+            }
         }
 
         private void InterpretaDetalhes(Dictionary<int, CupomFiscal> hashCupons)
         {
             foreach (DetalheCupomFiscal detalhe in detalheCuponsFiscais)
-                hashCupons[detalhe.COO].Detalhes.Add(detalhe);
+            {
+                CupomFiscal cupom;
+
+                if (hashCupons.TryGetValue(detalhe.COO, out cupom))
+                    cupom.Detalhes.Add(detalhe);
+            }
         }
 
         private void InterpretaEntidades(string caminho)
