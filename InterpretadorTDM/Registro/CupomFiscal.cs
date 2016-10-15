@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using InterpretadorTDM.Registro.Relacao;
 
 namespace InterpretadorTDM.Registro
 {
@@ -35,6 +36,7 @@ namespace InterpretadorTDM.Registro
 
         public List<DetalheCupomFiscal> Detalhes => detalhes;
         public List<DetalheMeioPagamento> DetalhesMeioPagamentos => detalhesMeioPagamentos;
+        public RelacaoReducoesZ ReducaoZ { get; internal set; }
 
         public CupomFiscal(string linha) : base(linha)
         {

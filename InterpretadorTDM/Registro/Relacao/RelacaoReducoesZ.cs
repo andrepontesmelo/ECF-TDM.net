@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace InterpretadorTDM.Registro.Relacao
 {
@@ -8,6 +9,7 @@ namespace InterpretadorTDM.Registro.Relacao
         private DateTime dataMovimento;
         private decimal vendaBrutaDiaria;
         private bool incidenciaDescontoISSQN;
+        private List<CupomFiscal> cupons;
 
         public int CRZ => crz;
         public int COO => coo;
@@ -15,6 +17,8 @@ namespace InterpretadorTDM.Registro.Relacao
         public DateTime DataMovimento => dataMovimento;
         public decimal VendaBrutaDiaria => vendaBrutaDiaria;
         public bool IncidenciaDescontoISSQN => incidenciaDescontoISSQN;
+
+        public List<CupomFiscal> Cupons => cupons;
 
         public RelacaoReducoesZ(string linha) : base(linha)
         {
@@ -26,6 +30,8 @@ namespace InterpretadorTDM.Registro.Relacao
             dataMovimento = LerData(65).Value;
             vendaBrutaDiaria = LerDecimal(87, 101, 2);
             incidenciaDescontoISSQN = LerBooleano(101);
+
+            cupons = new List<Registro.CupomFiscal>();
         }
 
         public static RelacaoReducoesZ InterpretaLinha(string linha)

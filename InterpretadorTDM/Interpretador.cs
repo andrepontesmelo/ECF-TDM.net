@@ -48,10 +48,27 @@ namespace InterpretadorTDM
 		private Interpretador(string caminho)
         {
             InterpretaEntidades(caminho);
-            InterpretaRelacionamentos();
+            InterpretaRelacionamentosCupom();
+            InterpretaRelacionamentosReducaoZ();
         }
 
-        private void InterpretaRelacionamentos()
+        private void InterpretaRelacionamentosReducaoZ()
+        {
+            Dictionary<DateTime, RelacaoReducoesZ> hashRelacoesZ = new Dictionary<DateTime, Registro.Relacao.RelacaoReducoesZ>();
+
+            foreach (RelacaoReducoesZ z in relacoesReducoesZ)
+                hashRelacoesZ[z.DataMovimento] = z;
+
+            foreach (CupomFiscal cupom in cuponsFiscais)
+            {
+                RelacaoReducoesZ z = hashRelacoesZ[cupom.DataInicioEmissao];
+
+                z.Cupons.Add(cupom);
+                cupom.ReducaoZ = z;
+            }
+        }
+
+        private void InterpretaRelacionamentosCupom()
         {
             Dictionary<int, CupomFiscal> hashCupons = new Dictionary<int, CupomFiscal>();
 
