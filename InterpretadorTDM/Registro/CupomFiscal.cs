@@ -61,6 +61,12 @@ namespace InterpretadorTDM.Registro
         {
             return new CupomFiscal(linha);
         }
+
+        public override string ToString()
+        {
+            return string.Format("Cupom #{0} da relação do dia {1}",
+                COO, ReducaoZ.DataMovimento.ToShortDateString());
+        }
     }
 }
 

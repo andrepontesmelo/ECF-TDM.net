@@ -1,19 +1,35 @@
 ﻿using InterpretadorTDM;
 using InterpretadorTDM.Registro;
+using InterpretadorTDM.Registro.Relacao;
 using System;
 
 class Exemplo
 {
     static void Main(string[] args)
     {
-        foreach (CupomFiscal cupom in Interpretador.InterpretaArquivo(@"c:\arquivo.tdm").CuponsFiscais)
+        var interpretador = Interpretador.InterpretaArquivo(@"c:\arquivo.tdm");
+
+        foreach (CupomFiscal cupom in interpretador.CuponsFiscais)
         {
             MostrarCupom(cupom);
             MostrarItens(cupom);
             MostrarPagamentos(cupom);
         }
 
+        MostrarRelacoesZ(interpretador);
+
         Console.ReadLine();
+    }
+
+    private static void MostrarRelacoesZ(Interpretador interpretador)
+    {
+        Console.WriteLine(" ===== Relações Z ===== ");
+
+        foreach (RelacaoReducoesZ z in interpretador.RelacoesReducoesZ)
+        {
+            Console.Write(z);
+            Console.WriteLine(string.Format(" possui {0} cupons", z.Cupons.Count));
+        }
     }
 
     private static void MostrarPagamentos(CupomFiscal cupom)

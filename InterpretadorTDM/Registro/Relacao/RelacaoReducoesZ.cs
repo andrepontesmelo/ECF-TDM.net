@@ -38,6 +38,12 @@ namespace InterpretadorTDM.Registro.Relacao
         {
             return new RelacaoReducoesZ(linha);
         }
+
+        public override string ToString()
+        {
+            return string.Format("Redução #{0} do dia {1}",
+                crz, DataMovimento.ToShortDateString());
+        }
     }
 }
 
